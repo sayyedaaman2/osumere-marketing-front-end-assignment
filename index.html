@@ -1,14 +1,88 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-    <link rel="stylesheet" href="src/style.css">
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/Logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Osumare - Digital Real Estate Solutions</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body>
+
+  <nav class="navbar grid grid-normal" role="navigation" aria-label="Main Navigation">
+    <div class="navbar-container">
+      <a href="/" class="navbar-logo" aria-label="Osumare Home">
+        <img src="/Logo.png" alt="Osumare Logo" />
+      </a>
+      <button class="button">Contact Us</button>
+    </div>
+  </nav>
+
+  <main role="main">
+   
+    <section id="hero" class="grid grid-narrow">
+      <div class="hero-container">
+        <div class="hero-content flow flex flex-col justify-center align-center" style="--gap : 2rem">
+          <h1 class="fs-900 fw-500">
+            Elevate <span class="text-accent fw-700">Real Estate Success</span>
+            with Osumare's Digital Expertise
+          </h1>
+          <p class="fs-600">
+            Tailored Solutions for Thriving in the Digital Real Estate Landscape
+          </p>
+          <button class="large-btn">Get started</button>
+        </div>
+        <img class="hero-img" src="/Header image.png" alt="Header Image"/>
+      </div>
+    </section>
+    <section  class="grid grid-normal">
+      <div class="hero-container flow " style="--gap : 4rem">
+          <h2 class="fs-700 fw-700">
+            Real Estate-Focused Digital Mastery
+          </h2>
+         
+          <div class="flex gap justify-center " style="--gap: 4rem; ">
+            <img src="/cuate.png" alt=""/>
+            <div class=" flow" style="--gap : 2rem">
+              <h2 class="fs-700 fw-700">
+                Unlock the Potential of Digital Real Estate Excellence
+              </h2>
+              <p class="fs-600">
+                At Osumare, we understand that the real estate landscape demands a digital presence that aligns with the intricacies of property marketing. Our range of specialized services is meticulously designed to catapult your brand's success in the ever-evolving digital property market.
+              </p>
+              <button class="small-btn">Get started</button>
+            </div>
+          </div>
+      </div>
+    </section>
+    <section id="services"  class="grid grid-normal">
+      <div class="hero-container flow " style="--gap : 2rem">
+          <h2 class="fs-700 fw-700">
+            Our Service Offerings
+          </h2>
+          <p class="fs-600">
+            Strategies that Drive Property Market Excellence             
+           </p>
+         
+          <div class="flex gap justify-center " style="--gap: 4rem; ">
+           
+            
+          </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="/src/main.js"></script>
+
+</body>
+
 </html>

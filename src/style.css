@@ -1,0 +1,300 @@
+/* ************************************ */
+/* CSS Reset */
+/* ************************************ */
+
+
+
+*,*::before,*::after{
+  margin : 0;
+  padding : 0;
+  box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+  display: block;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color : inherit;
+  line-height: inherit;
+}
+
+a{
+  display: block;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+
+  color : inherit;
+  line-height: inherit;
+}
+
+picture,img,image{
+  max-inline-size: 100%;
+}
+
+button{
+ font-family: inherit;
+ font-weight: inherit;
+ background-color: transparent;
+ border-color : inherit;
+ border-width: 0px;
+
+}
+/* ************************************ */
+/* Custom Properties */
+/* ************************************ */
+
+:root{
+  /* colors  */
+  --clr-white : #ffffff;
+  --clr-light-white : #F9F9F9;
+  --clr-black : #000C1A;
+  --clr-light-black : #333333;
+  --clr-accent : #0078FF;
+  --clr-light-accent : #E3EFFD;
+
+  /* font families */
+  --ff-serif : "Montserrat", sans-serif;
+
+  /* Use clamp to responsive typograph */
+  /* typography */
+  --fs-400 : 1rem;
+  --fs-500 : 1.125rem;
+  --fs-600 : 1.50rem;
+  --fs-700 : 2rem;
+  --fs-800 : 3rem;
+  --fs-900 : 3rem; 
+}
+
+/* ************************************ */
+/* Utility Classes */
+/* ************************************ */
+
+/* - background colors  */
+.bg-white{
+  background-color: var(--clr-white);
+}
+.bg-light-white{
+  background-color: var(--clr-light-white);
+}
+.bg-black{
+  background-color: var(--clr-black);
+}
+.bg-light-black{
+  background-color: var(--clr-light-black);
+}
+.bg-accent{
+  background-color: var(--clr-accent);
+}
+.bg-light-accent{
+  background-color: var(--clr-light-accent);
+}
+/* - text colors  */
+.text-white{
+  color: var(--clr-white);
+}
+.text-light-white{
+  color: var(--clr-light-white);
+}
+.text-black{
+  color: var(--clr-black);
+}
+.text-light-black{
+  color: var(--clr-light-black);
+}
+.text-accent{
+  color: var(--clr-accent);
+}
+.text-light-accent{
+  color: var(--clr-light-accent);
+}
+
+/* - font families */
+.ff-serif{
+  font-family: var(--ff-serif);
+}
+
+/* - font sizes */
+
+.fs-400{
+  font-size: var(--fs-400);
+}
+.fs-500{
+  font-size: var(--fs-500);
+}
+.fs-600{
+  font-size: var(--fs-600);
+}
+.fs-700{
+  font-size: var(--fs-700);
+}
+.fs-800{
+  font-size: var(--fs-800);
+}
+.fs-900{
+  font-size: var(--fs-900);
+}
+
+/* - font weight */
+.fw-400{
+  font-weight: 400;
+}
+.fw-500{
+  font-weight: 500;
+}
+.fw-600{
+  font-weight: 600;
+}
+.fw-700{
+  font-weight: 700;
+}
+
+.d-block{
+  display: block;
+}
+.flex{
+  display: flex;
+}
+.gap{
+  --gap: 1rem;
+  gap: var(--gap);
+}
+.grid{
+  display:grid;
+}
+
+.flex-col{
+  flex-direction: column;
+}
+
+.flow > *:not(:last-child){
+  /* --gap : 1rem; */
+  margin-bottom:  var(--gap);
+}
+
+.justify-center{
+  justify-content: center;
+}
+.align-center{
+  align-items: center;
+}
+
+
+
+
+/* ************************************ */
+/* General Classes */
+/* ************************************ */
+
+body{
+  position: relative;
+  background-color: var(--clr-white);
+  color : var(--clr-black);
+  font-family: var(--ff-serif);
+  min-height: 100vh;
+  height: 1440px;
+  
+}
+
+/* ************************************ */
+/* Layout */
+/* ************************************ */
+.grid-normal{
+  grid-template-columns: minmax(1rem,80px) 1fr minmax(1rem,80px);
+}
+.grid-narrow{
+  grid-template-columns: 15rem 1fr 15rem;
+ }
+
+/* ************************************ */
+/* Components */
+/* ************************************ */
+
+.navbar{
+  /* add blur effect */
+  position: sticky;
+  top:0;
+  
+  height: 108px;
+  backdrop-filter: blur(6px);
+}
+.navbar-container{
+  grid-column: 2/3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 768px;
+
+}
+.button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-color : var(--clr-black);
+  color : var(--clr-black);
+  border-width: 1px;
+  font-weight: 700;
+  --px : 10px;
+  --py : 50px;
+  padding : var(--px) var(--py);
+  border-radius: 25rem;
+  
+}
+.large-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color : var(--clr-white);
+  background-color: var(--clr-accent);
+  font-size: var(--fs-600);
+  font-weight: 700;
+  --px : .8125rem;
+  --py : 8.3125rem;
+  padding : var(--px) var(--py);
+  border-radius: 25rem;
+  
+}
+.small-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color : var(--clr-white);
+  background-color: var(--clr-accent);
+  font-size: var(--fs-500);
+  font-weight: 600;
+  --px : 1rem;
+  --py : 4rem;
+  padding : var(--px) var(--py);
+  border-radius: 25rem;
+  
+}
+
+
+#hero{
+  background-image: url('/public/herobackground.png');
+ 
+
+}
+
+.hero-container{
+  /* background-color: red; */
+  grid-column: 2/3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block: 200px;
+
+  
+
+}
+.hero-content{
+  text-align: center;
+}
+
+.hero-img{
+ margin-top: 100px;
+}
+#test{
+  width: 80%;
+}
